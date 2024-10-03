@@ -1,0 +1,17 @@
+const int button=2;
+const int buzzer=13;
+int buttonstate=0;
+
+void setup(){
+  pinMode(buzzer,OUTPUT);
+  pinMode(button,INPUT);
+}
+
+void loop(){
+  buttonstate=digitalRead(button);
+  if (buttonstate==HIGH){
+    digitalWrite(buzzer,HIGH);
+  }else{
+    digitalWrite(buzzer,LOW);
+  }
+}
